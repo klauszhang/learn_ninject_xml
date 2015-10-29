@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<module name="encryptorModule">
-  <bind service="learn_ninject_xml.IEncryptor, Encryptors" to="learn_ninject_xml.ShiftEncryptor, Encryptors" />
+﻿<module name="encryptorModule">
+  <bind service="learn_ninject_xml.IEncryptor, learn_ninject_xml" to="learn_ninject_xml.ShiftEncryptor, learn_ninject_xml" />
 </module>
