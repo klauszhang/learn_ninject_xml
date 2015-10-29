@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Ninject;
+using System;
 
 namespace learn_ninject_xml
 {
@@ -10,6 +7,11 @@ namespace learn_ninject_xml
   {
     static void Main(string[] args)
     {
+      var kernel = new StandardKernel();
+      kernel.Load("encryptorModule.xml");
+      var encryptor = kernel.Get<IEncryptor>();
+      Console.WriteLine(encryptor.Encrypt("Hello"));
+      Console.ReadKey();
     }
   }
 }
